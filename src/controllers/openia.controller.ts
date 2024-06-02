@@ -1,12 +1,11 @@
 import express from "express"
 import OpenAI from "openai";
-import { pipeline } from "node:stream/promises";
 import config from "../config";
 
 const router = express.Router();
 
 const openai = new OpenAI({
-    apiKey: config.tokenOpenIA,
+    apiKey: config.tokenOpenAI,
 });
 
 router.post("/", async (req, res) => {

@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    hostname: backend-questions-ai
+    container_name: backend-questions-ai
+    ports:
+      - '3000:3000'
+    environment:
+      NODE_ENV: production
+      OPENAI_API_KEY: "token"
+      TOKEN_HF: "token"
+      PORT: 3000

@@ -4,7 +4,7 @@ dotenv.config()
 
 const config = {
     port: process.env.PORT ?? 3000,
-    tokenOpenIA: process.env.TOKEN_OPENIA,
+    tokenOpenAI: process.env.OPENAI_API_KEY,
     tokenHF: process.env.TOKEN_HF
 }
 

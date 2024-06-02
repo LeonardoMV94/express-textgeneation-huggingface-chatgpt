@@ -1,4 +1,4 @@
-import express, { type Application } from "express"
+import express, { type Application, type Request, type Response } from "express"
 import cors from "cors"
 import { requestSchema } from "./schemas/request.schema"
 import { validateData } from "./middlewares/request.middleware"
@@ -12,7 +12,7 @@ app.use(cors())
 app.use(express.json())
 app.use(validateData(requestSchema))
 
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
     res.json({message: "hi"})
 });
 

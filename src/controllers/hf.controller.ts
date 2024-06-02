@@ -1,4 +1,3 @@
-import { pipeline } from "node:stream/promises";
 import express, { type Request, type Response } from "express"
 import { HfInference } from '@huggingface/inference'
 import config from "../config";
