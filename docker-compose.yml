@@ -12,3 +12,16 @@ services:
       OPENAI_API_KEY: "token"
       TOKEN_HF: "token"
       PORT: 3000
+    depends_on:
+      - ollama
+  ollama:
+    build: 
+      dockerfile: Dockerfile.Ollama
+      context: .
+    hostname: ollama
+    container_name: ollama
+    ports:
+      - "11434:11434"
+networks:
+  app-ai:
+    external: true

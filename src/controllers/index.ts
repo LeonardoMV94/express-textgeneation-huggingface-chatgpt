@@ -1,6 +1,7 @@
 import express, { Application } from "express"
 import chatgptController from "./openia.controller"
 import huggingfaceController from "./hf.controller"
+import ollamaController from "./ollama.controller"
 
 const routes = (app: Application) => {
     const router = express.Router()
@@ -9,6 +10,7 @@ const routes = (app: Application) => {
     
     router.use("/chatgpt", chatgptController)
     router.use("/hf", huggingfaceController)
+    router.use("/ollama", ollamaController)
 }
 
 
